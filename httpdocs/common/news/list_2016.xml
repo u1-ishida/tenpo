@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<newslist>
+<!--
+Please list from newest to newest.
+
+<date>.[datetime]
+   Please enter the date of the article in [YYYY-MM-DD] format.
+<date>
+   Please enter the date of the article in ['Month name' DD, YYYY] format.
+<link>
+   Please enter the article link destination in absolute path.
+<title>
+   Please enter the news title.
+<description>
+   Please enter a summary of articles.
+-->
+
+<item>
+<date datetime="2016-06-07">July 07, 2016</date>
+<link>/news/yymmdd/</link>
+<title>NAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donutsNAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donuts</title>
+<description>NAGASE, a leading innovator in food ingredients, will serve a grapefruit energy beverage and glazed donuts at IFT16, to highlight the multi-functionality of TREHA&#174; trehalose in beverage and bakery applications.  TREHA&#174; is a unique, high performance food ingredient with consumer benefits for freshness, flavor, and texture.  NAGASE will be at booth number #3817 at IFT16, held in Chicago from July 16-19, 2016.</description>
+</item>
+
+<item>
+<date datetime="2016-06-06">July 06, 2016</date>
+<link>/news/yymmdd/</link>
+<title>NAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donuts</title>
+<description>NAGASE, a leading innovator in food ingredients, will serve a grapefruit energy beverage and glazed donuts at IFT16, to highlight the multi-functionality of TREHA&#174; trehalose in beverage and bakery applications.  TREHA&#174; is a unique, high performance food ingredient with consumer benefits for freshness, flavor, and texture.  NAGASE will be at booth number #3817 at IFT16, held in Chicago from July 16-19, 2016.</description>
+</item>
+
+<item>
+<date datetime="2016-06-05">July 05, 2016</date>
+<link>/news/yymmdd/</link>
+<title>NAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donuts</title>
+<description>NAGASE, a leading innovator in food ingredients, will serve a grapefruit energy beverage and glazed donuts at IFT16, to highlight the multi-functionality of TREHA&#174; trehalose in beverage and bakery applications.  TREHA&#174; is a unique, high performance food ingredient with consumer benefits for freshness, flavor, and texture.  NAGASE will be at booth number #3817 at IFT16, held in Chicago from July 16-19, 2016.</description>
+</item>
+
+<item>
+<date datetime="2016-06-04">July 04, 2016</date>
+<link>/news/yymmdd/</link>
+<title>NAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donuts</title>
+<description>NAGASE, a leading innovator in food ingredients, will serve a grapefruit energy beverage and glazed donuts at IFT16, to highlight the multi-functionality of TREHA&#174; trehalose in beverage and bakery applications.  TREHA&#174; is a unique, high performance food ingredient with consumer benefits for freshness, flavor, and texture.  NAGASE will be at booth number #3817 at IFT16, held in Chicago from July 16-19, 2016.</description>
+</item>
+
+<item>
+<date datetime="2016-06-03">July 03, 2016</date>
+<link>/news/yymmdd/</link>
+<title>NAGASE to present &#8220;healthy indulgence&#8221; at the IFT16, featuring TREHA&#174; trehalose in energy drinks and donuts</title>
+<description>NAGASE, a leading innovator in food ingredients, will serve a grapefruit energy beverage and glazed donuts at IFT16, to highlight the multi-functionality of TREHA&#174; trehalose in beverage and bakery applications.  TREHA&#174; is a unique, high performance food ingredient with consumer benefits for freshness, flavor, and texture.  NAGASE will be at booth number #3817 at IFT16, held in Chicago from July 16-19, 2016.</description>
+</item>
+
+</newslist>

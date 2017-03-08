@@ -1,0 +1,11 @@
+Account registration request received. 
+Please review for authorization.
+
+< UserId>
+[UserId]
+
+< Company >
+[Company]
+
+< Country >
+[Country]

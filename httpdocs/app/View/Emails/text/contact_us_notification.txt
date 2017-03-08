@@ -1,0 +1,4 @@
+Inquiry received.  Please review and reply to the sender.
+
+< ContactId >
+[ContactId]

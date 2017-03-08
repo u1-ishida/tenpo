@@ -1,0 +1,4 @@
+mail send failed.
+email: [email]
+title: [title]
+body: [body]

@@ -1,0 +1,201 @@
+div.container{
+width:980px;
+margin:0 auto;
+}
+div.container p.intro{
+text-align:left;
+margin-bottom:3rem;
+}
+
+
+
+article.lc{
+width:620px!important;
+float:left;
+margin:0!important;
+padding:0 20px 0 0;
+/*border-right:1px solid #ccc;*/
+box-sizing:border-box;
+}
+article.lc section,
+article.lc h3:after{
+width:590px!important;
+}
+article.rc{
+width:300px!important;
+float:right;
+padding:20px;
+border:1px solid #ccc;
+border-radius:3px;
+}
+article.rc section,
+article.rc h3:after{
+width:300px!important;
+}
+article.content{
+margin-bottom:1rem;
+}
+
+
+
+article section.login{
+margin-bottom:1rem;
+}
+section.login p{
+padding:0 5% 0 0;
+margin:0 0 2rem 0;
+}
+section.login span.head{
+width:90px;
+display:inline-block;
+box-sizing:border-box;
+font-weight:bold;
+}
+section.login input#id,
+section.login input#password{
+box-sizing:border-box;
+width:80%;
+padding:10px;
+font-size:110%;
+border:1px solid #aaa;
+border-radius:3px;
+}
+section.login input#login{
+display:inline-block;
+width:250px;
+margin:20px auto 0 auto;
+padding:13px;
+color:#fff;
+background-color:#c01443;
+border:none;
+border-radius:3px;
+transition:all 0.3s ease;
+font-size:100%;
+cursor:pointer;
+}
+section.login input#login:hover{
+opacity:0.7;
+text-decoration:none;
+}
+section.login p label.checkbox{
+margin-left:90px;
+}
+
+section.login p.forgotpw{
+text-align:right;
+margin:-1.5rem 5% 0 0;
+}
+section.login p.forgotpw a{
+text-decoration:underline;
+font-size:80%;
+}
+
+
+
+article.rc p{
+margin:0;
+}
+article.rc a.btn{
+display:inline-block;
+width:250px;
+margin:5px auto 25px auto;
+padding:13px;
+color:#fff;
+background-color:#c01443;
+border:none;
+border-radius:3px;
+transition:all 0.3s ease;
+font-size:100%;
+cursor:pointer;
+text-align:center;
+}
+article.rc a.btn:hover{
+opacity:0.7;
+text-decoration:none;
+}
+article section.regsect{
+margin-bottom:10px;
+}
+
+p.error{
+margin-bottom:1rem!important;
+padding-left:-webkit-calc(10% + 90px)!important;
+padding-left:-moz-calc(10% + 90px)!important;
+padding-left:calc(10% + 90px)!important;
+font-size:110%;
+}
+
+
+
+/* Password reset */
+form.pwreset p{
+padding-left:calc(10%)!important;
+}
+form.pwreset span{
+font-weight:bold;
+}
+form.pwreset p.error{
+font-size:15px;
+padding-left:calc(10% + 90px)!important;
+margin-bottom:0!important;
+}
+
+
+@media screen and (max-width:599px) {
+div.container,
+article.lc,
+article.rc,
+article.lc h3:after,
+article.rc h3:after,
+article.lc section,
+article.rc section{
+width:100%!important;
+}
+p.intro{
+padding:0 10px;
+}
+article.lc,
+article.rc{
+padding:0 10px!important;
+border:none!important;
+}
+article.content{
+margin-bottom:3rem;
+}
+section.login p{
+padding:0;
+}
+section.login span.head{
+display:block;
+width:100%;
+}
+section.login input#id,
+section.login input#password{
+width:100%;
+}
+section.login p label.checkbox{
+margin:10px 0 0 10px;
+}
+section.login input#login{
+margin-bottom:3rem;
+}
+section.login p.forgotpw{
+width:100%;
+margin-bottom:0rem;
+}
+article section.regsect div{
+width:100%;
+box-sizing:border-box;
+}
+p.resettxt{
+text-align:left!important;
+}
+p.error{
+margin-bottom:1rem!important;
+padding-left:0!important;
+font-size:100%;
+}
+form.pwreset p{
+padding-left:0!important;
+}
+}

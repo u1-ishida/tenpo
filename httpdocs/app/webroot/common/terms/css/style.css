@@ -1,0 +1,18 @@
+ol{
+margin:0 0 1rem 4rem;
+}
+ol li{
+margin-bottom:1rem;
+line-height:1.5rem;
+}
+
+
+@media screen and (max-width:599px) {
+ol{
+margin:0 0 1rem 2rem;
+}
+ol li{
+margin-bottom:1rem;
+line-height:1.3rem;
+}
+}

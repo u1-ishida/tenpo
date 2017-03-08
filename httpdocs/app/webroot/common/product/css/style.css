@@ -1,0 +1,435 @@
+strong{
+font-weight:bold;
+}
+
+
+/* Disclaimer */
+p.disclaimer_trigger{
+text-align:right;
+}
+a.disclaimer_trigger{
+color:#c01443;
+}
+a.disclaimer_trigger:before{
+content:'\003e\00a0';
+}
+div.remodal h3,
+div.remodal p{
+text-align:left;
+}
+div.remodal h3{
+margin-bottom:1rem;
+}
+div.remodal h3:after{
+margin-top:0.5rem;
+content:"";
+display:block;
+width:100%;
+height:2px;
+background:-moz-linear-gradient(left,#c01443,#fff);
+background:-webkit-linear-gradient(left,#c01443,#fff);
+background:-ms-linear-gradient(left,#c01443,#fff);
+background:linear-gradient(left,#c01443,#fff);
+}
+div.remoda1 button{
+right:10px!important;
+}
+div.remodal button{
+margin-top:1.5rem;
+}
+
+
+section.p_spec img{
+width:350px;
+height;auto;
+border:1px solid #eee;
+float:left;
+}
+section.p_spec dl{
+float:right;
+width:600px;
+box-sizing:border-box;
+margin-left:20px;
+border-top:1px solid #ccc;
+}
+section.p_spec dl dt{
+display:inline-block;
+width:125px;
+font-weight:bold;
+font-size:100%;
+line-height:1.3rem;
+margin:0;
+padding:15px 0;
+vertical-align:top;
+}
+section.p_spec dl dt:after{
+content:":";
+}
+section.p_spec dl dd{
+display:inline-block;
+width:470px;
+font-size:100%;
+line-height:1.3rem;
+margin:0 0 0 -5px;
+padding:15px 0;
+}
+section.p_spec dl dd span{
+white-space:nowrap;
+display:inline-block;
+}
+section.p_spec dl dd span:after{
+content:',';
+margin-right:5px;
+}
+section.p_spec dl dd span:last-child:after{
+content:none;
+}
+section.p_spec dl dd span#AirFreshener:before{
+content:" ";
+background:url('/common/product/img/ico_AirFreshener.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+}
+section.p_spec dl dd span#AirFreshener:after{
+content:none;
+}
+section.p_spec dl dd span#AirFreshener{
+margin-right:10px;
+}
+section.p_spec dl dd span#APDEO:before{
+content:" ";
+background:url('/common/product/img/ico_APDEO.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#APDEO:after{
+content:none;
+}
+section.p_spec dl dd span#APDEO{
+margin-right:10px;
+}
+section.p_spec dl dd span#BodyCare:before{
+content:" ";
+background:url('/common/product/img/ico_BodyCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#BodyCare:after{
+content:none;
+}
+section.p_spec dl dd span#BodyCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#ColorCosmetics:before{
+content:" ";
+background:url('/common/product/img/ico_ColorCosmetics.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#ColorCosmetics:after{
+content:none;
+}
+section.p_spec dl dd span#ColorCosmetics{
+margin-right:10px;
+}
+section.p_spec dl dd span#Dishwashing:before{
+content:" ";
+background:url('/common/product/img/ico_Dishwashing.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#Dishwashing:after{
+content:none;
+}
+section.p_spec dl dd span#Dishwashing{
+margin-right:10px;
+}
+section.p_spec dl dd span#HairCare:before{
+content:" ";
+background:url('/common/product/img/ico_HairCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#HairCare:after{
+content:none;
+}
+section.p_spec dl dd span#HairCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#Household:before{
+content:" ";
+background:url('/common/product/img/ico_Household.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+}
+section.p_spec dl dd span#Household:after{
+content:none;
+}
+section.p_spec dl dd span#Household{
+margin-right:10px;
+}
+section.p_spec dl dd span#LaundryCare:before{
+content:" ";
+background:url('/common/product/img/ico_LaundryCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#LaundryCare:after{
+content:none;
+}
+section.p_spec dl dd span#LaundryCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#LivingCare:before{
+content:" ";
+background:url('/common/product/img/ico_LivingCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#LivingCare:after{
+content:none;
+}
+section.p_spec dl dd span#LivingCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#OralCare:before{
+content:" ";
+background:url('/common/product/img/ico_OralCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#OralCare:after{
+content:none;
+}
+section.p_spec dl dd span#OralCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#SkinCare:before{
+content:" ";
+background:url('/common/product/img/ico_SkinCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#SkinCare:after{
+content:none;
+}
+section.p_spec dl dd span#SkinCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#SunCare:before{
+content:" ";
+background:url('/common/product/img/ico_SunCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#SunCare:after{
+content:none;
+}
+section.p_spec dl dd span#SunCare{
+margin-right:10px;
+}
+section.p_spec dl dd span#ToiletCare:before{
+content:" ";
+background:url('/common/product/img/ico_ToiletCare.png') center bottom no-repeat;
+background-size:contain;
+margin-right:5px;
+height:20px;
+width:20px;
+display:inline-block;
+vertical-align:text-bottom;
+}
+section.p_spec dl dd span#ToiletCare:after{
+content:none;
+}
+section.p_spec dl dd span#ToiletCare{
+margin-right:10px;
+}
+section.p_spec dl:last-child{
+border-bottom:1px solid #ccc;
+}
+
+section.p_detail h4,
+section.p_docs h4{
+font-size:130%;
+border-bottom:1px solid #ccc;
+padding:0 0 10px 0;
+margin-bottom:10px;
+}
+section.p_detail ul.studies li{
+line-height:1.3rem;
+}
+section.p_detail ul.studies li:before{
+content:"-";
+margin-right:5px;
+}
+section.p_detail ul.studies li.shead:before{
+content:none;
+}
+section.p_docs ul.download li{
+line-height:1.3rem;
+}
+section.p_docs ul.download li a[target="_blank"]{
+background:none;
+padding-right:0;
+}
+section.p_docs ul.download li.deactive{
+cursor:not-allowed;
+}
+section.p_docs ul.download li:before{
+font-family:'FontAwesome';
+content:"\f0da";
+margin:0 3px 0 0;
+padding-bottom:2px;
+display:inline-block;
+}
+section.p_docs ul.download li:after{
+font-family:'FontAwesome';
+content:"\f016";
+margin:0 0 0 5px;
+padding-bottom:2px;
+display:inline-block;
+}
+
+section.p_docs a.btn,
+section.p_docs span.btn{
+display:block;
+text-align:center;
+width:400px;
+margin:30px auto 0 auto;
+padding:25px 0;
+color:#c01443;
+background-color:#eee;
+border:1px solid #eee;
+border-radius:3px;
+transition:all 0.3s ease;
+font-size:110%;
+cursor:pointer;
+}
+section.p_docs span.btn{
+color:#aaa;
+cursor:not-allowed;
+}
+section.p_docs a.btn:hover{
+opacity:0.7;
+text-decoration:none;
+}
+
+p.beforelogin{
+margin:30px 50px!important;
+padding:10px 0;
+border:1px solid #c01443;
+border-radius:3px;
+color:#c01443;
+text-align:center;
+box-sizing:border-box;
+}
+p.beforelogin a{
+text-decoration:underline;
+color:#c01443;
+}
+section p.notice{
+color:#c01443;
+font-size:80%;
+margin-bottom:12px;
+line-height:100%;
+}
+
+
+@media screen and (max-width:599px) {
+section.p_name{
+margin-bottom:0!important;
+}
+section.p_spec img{
+float:none;
+margin-bottom:3rem;
+width:100%;
+}
+section.p_spec dl,
+section.p_spec dl dt,
+section.p_spec dl dd{
+width:100%;
+margin:0;
+padding:3px 0;
+float:none;
+display:block;
+}
+section.p_spec dl dd img{
+border:none;
+height:20px;
+width:auto;
+float:none;
+vertical-align:top;
+margin-right:5px;
+margin-left:3px;
+}
+section.p_docs a.btn,
+section.p_docs span.btn{
+margin-top:5rem;
+width:90%;
+}
+section.p_detail h4 span{
+display:block;
+font-size:70%;
+}
+p.beforelogin{
+margin:30px 0!important;
+}
+
+p.disclaimer_trigger{
+font-size:90%;
+}
+.remodal-wrapper{
+margin:0!important;
+padding:0!important;
+background: rgba(43, 46, 56, 0.9);
+}
+.remodal p{
+font-size:80%;
+}
+}

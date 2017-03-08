@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<newslist>
+<!--
+Please list from newest to newest.
+
+<date>.[datetime]
+   Please enter the date of the article in [YYYY-MM-DD] format.
+<date>
+   Please enter the date of the article in ['Month name' DD, YYYY] format.
+<link>
+   Please enter the article link destination in absolute path.
+<title>
+   Please enter the news title.
+<description>
+   Please enter a summary of articles.
+-->
+
+<item>
+<date datetime="2017-02-15">February 15, 2017</date>
+<link>/news/170215_1/</link>
+<title>NAGASE Personal Care website is now OPEN!</title>
+<description>We are pleased to announce the launch of our brand new website catering for our customers.</description>
+</item>
+
+<item>
+<date datetime="2017-02-15">February 15, 2017</date>
+<link>/news/170215_2/</link>
+<title>Beauty Protection showcase at in-cosmetics 2017!</title>
+<description>NAGASE Personal Care will be at in-cosmetics&#174; global on 4-6 April 2017, in London.</description>
+</item>
+
+<item>
+<date datetime="2017-02-15">February 15, 2017</date>
+<link>/news/170215_3/</link>
+<title>NAGASE Personal Care will be at PCHi 2017 Guangzhou, China!</title>
+<description>Please visit us at this year's PCHi Guangzhou on 21-23 February 2017.</description>
+</item>
+
+</newslist>
