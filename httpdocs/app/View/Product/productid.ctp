@@ -112,6 +112,7 @@ function select_category() {
 </dl>
 <?php } ?>
 
+<?php if (count($product['Ceretification']) > 0) { ?>
 <dl>
 <dt>Certification</dt>
 <dd>
@@ -119,6 +120,7 @@ function select_category() {
 <span><?php echo $certification; ?></span><?php } ?>
 </dd>
 </dl>
+<?php } ?>
 
 <?php if ($product['Application']) { ?>
 <dl>
@@ -137,6 +139,7 @@ function select_category() {
 <p><?php echo nl2br($product['ProductDescription']); ?></p>
 </section>
 
+<?php if (count($document_list) > 0) { ?>
 <section class="p_docs fade">
 <h4>Documents</h4>
 <?php if ($id) { ?>
@@ -157,7 +160,9 @@ function select_category() {
 </ul>
 <?php } ?>
 </section>
+<?php } ?>
 
+<?php if (count($studies_list) > 1) { ?>
 <section class="p_detail fade">
 <h4>Available Studies</h4>
 <p class="notice">* Please contact for further information.</p>
@@ -167,7 +172,14 @@ function select_category() {
 <?php } ?>
 </p>
 </section>
+<?php } ?>
 
+<?php if ($product['AvailableRegion']) { ?>
+<section class="p_detail fade">
+<h4>Available Region</h4>
+<p class="shead"><?php echo $product['AvailableRegion']; ?></p>
+</section>
+<?php } ?>
 
 <section class="p_docs fade">
 <!-- disclaimer // -->

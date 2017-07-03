@@ -37,6 +37,14 @@
 </section>
 
 <section>
+<?php $class = " class='acchange'"; if ($salutation_error) { $class = " class='acchange error'"; ?>
+<p class="error">* <?php echo $salutation_error; ?></p>
+<?php } ?>
+<p><span>Salutation</span><label class="select"><select name="data[Account][salutation]" id="salutation"<?php echo $class; ?>>
+<option value="" class="placeholder">Select Salutation</option>
+<?php echo $salutation_option; ?>
+</select></label></p>
+
 <?php $class1 = "inputtxt"; if ($name1_error) { $class1 = "inputtxt error"; } ?>
 <?php $class2 = "inputtxt"; if ($name2_error) { $class2 = "inputtxt error"; } ?>
 <?php $class = "inputtxt"; if ($name_error) { $class = "inputtxt error"; ?>
@@ -60,6 +68,10 @@
 <p><span>Company</span><!--
 --><?php echo $this->Form->text('Account.company',array('required' => false, 'class' => "$class", 'id' => 'company', 'maxlength' => 80)); ?><!--
 --></p>
+<?php $class = "inputtxt"; if ($companywebsite_error) { $class = "inputtxt error"; ?>
+<p class="error">* <?php echo $companywebsite_error; ?></p>
+<?php } ?>
+<p><span class="fnt90">Company's Website<span class="optblock">(optional)</span></span><?php echo $this->Form->text('Account.companywebsite', array('required' => false, 'id'=>'companywebsite', 'class'=>"$class", 'maxlength' => 80)); ?></p>
 <?php $class = ""; if ($businesstype_error) { $class = " class='error'"; ?>
 <p class="error">* <?php echo $businesstype_error; ?></p>
 <?php } ?>

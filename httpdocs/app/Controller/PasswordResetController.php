@@ -65,7 +65,7 @@ class PasswordResetController extends AppController {
 				//ユーザーにメール送信
 				$email = $this->request->data['PasswordReset']['email'];
 				$param = $this->getParam($email);
-				$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php $email password_change $param > /dev/null &";
+				$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php $email password_change $param > /dev/null &";
 				exec($command);
 				$this->log("$command", "info");
 				$this->render('order_complete');

@@ -3,13 +3,13 @@
 
 <div class="search">
 <p class="tabs">
-<a href="#keyword" onclick="ChangeTab('keyword');return false;" id="keyword" class="tab current" title="Search from the input words.">Keyword Search</a>
+<a href="#keyword" onclick="ChangeTab('keyword');return false;" id="keyword" class="tab current" title="Search from the input words.">Product Search</a>
 <a href="#filter" onclick="ChangeTab('selection');return false;" id="selection" class="tab" title="Search from the selected item.">Filter Selection</a>
 </p>
 
 <div id="keyword" class="tabcontent current">
 <form action="/product/search" method="POST">
-<input type="text" class="inputword" name="keywordsearch" value="<?php echo $keywordsearch; ?>">
+<input type="text" class="inputword" name="keywordsearch" value="<?php echo $keywordsearch; ?>" placeholder="Enter keyword">
 <input type="submit" class="searchbtn" name="keywordsearchbtn" value="Search" title="Display searched items with the input words.">
 </form>
 </div>

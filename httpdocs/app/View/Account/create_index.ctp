@@ -40,7 +40,9 @@
 
 <section class="regintro fade">
 <p class="mb-1rem">The NAGASE Personal Care website provides product information for scientists, researchers, formulators and marketers in the personal care industry to support their research, formulation, product development, and business expansion.<br>
-The website welcomes users to register in order to be updated with NAGASE Personal Care products and additional information. There are cases where we may decline the account request due to the following reasons:</p>
+The website welcomes users to register in order to be updated with NAGASE Personal Care products and additional information.<br>
+Once approval has been granted you will be able to login.</p>
+<p class="mb-1rem">There are cases where we may decline the account request due to the following reasons:</p>
 <p class="ml-1rem mb-0">1) The information is false or incomplete.</p>
 <p class="ml-1rem mb-1rem">2) The organization is not in the personal care industry or in a similar business to ours.</p>
 <p>We appreciate your understanding.</p>

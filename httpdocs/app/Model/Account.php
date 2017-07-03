@@ -92,6 +92,10 @@ class Account extends AppModel {
 			'rule'    => array('maxLength', 80),
 			'message' => 'Position must be 80 characters or less.'
 		),
+		'companywebsite' => array(
+			'rule'    => array('maxLength', 80),
+			'message' => "Company's Website must be 80 characters or less."
+		),
 		'tel' => array(
 			'rule1' => array(
 				'rule'    => 'notEmpty',

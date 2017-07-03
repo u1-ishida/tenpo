@@ -42,7 +42,7 @@ NAGASE (EUROPA) GmbH Stand: <span class="b">BB38</span></p>
 
 <p itemprop="articleSection">in-cosmetics&reg; global this year will be focusing on <span class="b">Beauty Protection</span> with current trend of anti-pollution and anti-stress ingredients.</p>
 
-<p itemprop="articleSection">NAGASE Personal Care will showcase beauty and personal care ingredients from multi-level protection aspects with the latest novel skin care active Extremosio&trade; at <span class="b">Innovation Zone</span>. We will also be holding <span class="b">Mini Seminars</span> at our booth on BB38. For further information and making appointments at the show, please email to nagase-personalcare@nagase.co.jp.</p>
+<p itemprop="articleSection">NAGASE Personal Care will showcase beauty and personal care ingredients from multi-level protection aspects with the latest novel skin care active Extremosio&trade; at <span class="b">Innovation Zone</span>. We will also be holding <span class="b">Mini Seminars</span> at our booth on BB38. For further information and making appointments at the show, please email to &#110;&#97;&#103;&#97;&#115;&#101;&#45;&#112;&#101;&#114;&#115;&#111;&#110;&#97;&#108;&#99;&#97;&#114;&#101;&#64;&#110;&#97;&#103;&#97;&#115;&#101;&#46;&#99;&#111;&#46;&#106;&#112;.</p>
 
 <p itemprop="articleSection">Sign up for your free admission badge now to meet Nagase Personal Care team in London at <a href="http://www.in-cosmetics.com/global/" target="_blank" rel="nofollow">http://www.in-cosmetics.com/global/</a>.</p>
 </section>

@@ -45,10 +45,12 @@ class AppController extends Controller {
 
 	//ログインしているユーザー
 	var $tenpoUserId;
+	var $Salutation;
 	var $FirstName;
 	var $LastName;
 	var $Email;
 	var $CompanyName;
+	var $EmployerWebsite;
 	var $BusinessType;
 	var $BusinessTypeOther;
 	var $ProfessionalTitle;
@@ -67,7 +69,7 @@ class AppController extends Controller {
 		$this->Cookie->name = 'baker_id';
 		$this->Cookie->time = 3600;  // または '1 hour'
 		$this->Cookie->path = '/';
-		$this->Cookie->domain = 'nagase-personalcare.com';
+		$this->Cookie->domain = DOMAIN;
 		//$this->Cookie->secure = true;  // セキュアな HTTPS で接続している時のみ発行されます
 		$this->Cookie->key = 'qSI232qs*&sXOw!adre@34SAv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
 		$this->Cookie->httpOnly = true;
@@ -94,10 +96,12 @@ class AppController extends Controller {
 		}
 		$this->info("login not expire $now_time <= $expire");
 		$this->tenpoUserId = $data['tenpoUserId'];
+		$this->Salutation = $data['Salutation'];
 		$this->FirstName = $data['FirstName'];
 		$this->LastName = $data['LastName'];
 		$this->Email = $data['Email'];
 		$this->CompanyName = $data['CompanyName'];
+		$this->EmployerWebsite = $data['EmployerWebsite'];
 		$this->BusinessType = $data['BusinessType'];
 		$this->BusinessTypeOther = $data['BusinessTypeOther'];
 		$this->ProfessionalTitle = $data['ProfessionalTitle'];

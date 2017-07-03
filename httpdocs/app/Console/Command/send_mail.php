@@ -4,9 +4,9 @@
  *
  * @since 2016-12-28
  * @author y-oishi@netyear.net
+ * @update 2017-03-15 ソース整理
  */
 require('PHPMailer/PHPMailerAutoload.php');
-require('/var/www/vhosts/nagase-personalcare.com/httpdocs/app/Config/const.php');
 
 require('config.php');
 require('errorlog.php');
@@ -62,7 +62,7 @@ if ($email_body_file == "member_regist_notification") {
 	$body = str_replace("[param]", $param1, $body);
 } else if ($email_body_file == "contact_us_notification") {
 	$body = str_replace("[ContactId]", $param2, $body);
-	$file_name = "/var/www/vhosts/nagase-personalcare.com/httpdocs/app/tmp/mail/" . $param2 . ".txt";
+	$file_name = DOCUMENT_ROOT . "app/tmp/mail/" . $param2 . ".txt";
 	$body .= "\n";
 	$body .= @file_get_contents($file_name);
 }

@@ -79,7 +79,16 @@ function select_category() {
 </div>
 
 
-
+<article class="top-intro fade">
+<section>
+<p>
+Welcome to NAGASE Personal Care.<br>
+This website provides NAGASE Personal Care's ingredients information for personal care industry.  
+We welcome users to register to gain access to downloadable product catalogs and sample formulations, and to be informed for new updates and additional offerings from us.<br>
+Thank you very much for your interest.
+</p>
+</section>
+</article>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/include/product_lineup.php'); ?>
 
 

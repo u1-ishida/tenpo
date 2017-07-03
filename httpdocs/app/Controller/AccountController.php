@@ -4,6 +4,7 @@
  *
  * @since 2016-12-15
  * @author y-oishi@netyear.net
+ * @update 2017-03-14 敬称,Company's Website
  */
 class AccountController extends AppController {
 
@@ -46,6 +47,7 @@ class AccountController extends AppController {
 		if ($this->session_data) {
 			//セッションにデータがあれば、エラー画面を表示する
 			extract($this->request->data['Account']);
+			$this->Salutation = $salutation;
 			$this->BusinessType = $businesstype;
 			$this->Country_Region = $country;
 			$this->CountryOther = $othercountry;
@@ -72,11 +74,13 @@ class AccountController extends AppController {
 
 	//エラーはなしの状態に
 	private function clear_error() {
+		$this->set_data('salutation_error', '');
 		$this->set_data('name_error', '');
 		$this->set_data('name1_error', '');
 		$this->set_data('name2_error', '');
 		$this->set_data('email_error', '');
 		$this->set_data('company_error', '');
+		$this->set_data('companywebsite_error', '');
 		$this->set_data('position_error', '');
 		$this->set_data('password_error', '');
 		$this->set_data('password2_error', '');
@@ -160,6 +164,7 @@ class AccountController extends AppController {
 
 		//各種HTMLの作成
 		extract($this->request->data['Account']);
+		$this->Salutation = $salutation;
 		$this->BusinessType = $businesstype;
 		$this->Country_Region = $country;
 		$this->CountryOther = $othercountry;
@@ -201,6 +206,11 @@ class AccountController extends AppController {
 		} else {
 			$this->set_data('company_error', '');
 		}
+		if (isset($errors['companywebsite'])) {
+			$this->set_data('companywebsite_error', $errors['companywebsite'][0]);
+		} else {
+			$this->set_data('companywebsite_error', '');
+		}
 		if (isset($errors['position'])) {
 			$this->set_data('position_error', $errors['position'][0]);
 		} else {
@@ -223,6 +233,14 @@ class AccountController extends AppController {
 				$this->set_data('password2_error', "Passwords do not match.");
 				$error = true;
 			}
+		}
+		//敬称
+		if ($salutation) {
+			$this->Salutation = $salutation;
+			$this->set_data('salutation_error', "");
+		} else {
+			$this->set_data('salutation_error', "Please select Salutation.");
+			$error = true;
 		}
 		//Business Type
 		if ($businesstype) {
@@ -348,6 +366,9 @@ class AccountController extends AppController {
 
 	//各種HTMLの作成
 	private function edit_html() {
+		$salutation_option = $this->make_salutation_option();
+		$this->set_data('salutation_option', $salutation_option);
+
 		$bussness_type_option = $this->make_bussness_type_option();
 		$this->set_data('bussness_type_option', $bussness_type_option);
 
@@ -424,18 +445,23 @@ class AccountController extends AppController {
 		if ($this->session_data) {
 			//セッションにデータがあれば、エラー画面を表示する
 			extract($this->data['Account']);
+			$this->Salutation = $salutation;
 			$this->BusinessType = $businesstype;
+			$this->EmployerWebsite = $companywebsite;
 			$this->Country_Region = $country;
 			$this->CountryOther = $othercountry;
 			$this->edit_html();
 			$this->render('edit_input');
 			return;
 		}
+		$this->set_data('salutation_error', '');
 		$this->set_data('name_error', '');
 		$this->set_data('name1_error', '');
 		$this->set_data('name2_error', '');
 		$this->set_data('email_error', '');
 		$this->set_data('company_error', '');
+		$this->set_data('companywebsite_error', '');
+		$this->set_data('position_error', '');
 		$this->set_data('businesstype_error', '');
 		$this->set_data('otherbusinesstype_error', '');
 		$this->set_data('country_error', '');
@@ -448,10 +474,12 @@ class AccountController extends AppController {
 		}
 
 		$data = array();
+		$data['salutation'] = $this->Salutation;
 		$data['name1'] = $this->FirstName;
 		$data['name2'] = $this->LastName;
 		$data['email'] = $this->Email;
 		$data['company'] = $this->CompanyName;
+		$data['companywebsite'] = $this->EmployerWebsite;
 		$data['businesstype'] = $this->BusinessType;
 		$data['otherbusinesstype'] = $this->BusinessTypeOther;
 		$data['position'] = $this->ProfessionalTitle;
@@ -623,6 +651,7 @@ class AccountController extends AppController {
 		$this->Account->set($request_data);
 		//各種HTMLの作成
 		extract($this->request->data['Account']);
+		$this->Salutation = $salutation;
 		$this->BusinessType = $businesstype;
 		$this->Country_Region = $country;
 		$this->CountryOther = $othercountry;
@@ -638,7 +667,7 @@ class AccountController extends AppController {
 
 		//■会員登録
 		//ユーザーにメール送信
-		$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php $email member_regist > /dev/null &";
+		$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php $email member_regist > /dev/null &";
 		exec($command);
 		$this->log("$command", "info");
 
@@ -650,7 +679,7 @@ class AccountController extends AppController {
 
 		$company = escapeshellarg($company);
 		$mail_country = escapeshellarg($mail_country);
-		$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php " . MAIL_TO . " member_regist_notification $UserId $company $mail_country > /dev/null &";
+		$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php " . MAIL_TO . " member_regist_notification $UserId $company $mail_country > /dev/null &";
 		system($command);
 		$this->log("$command", "info");
 
@@ -658,7 +687,7 @@ class AccountController extends AppController {
 		if ($contactdetail) {
 			//■お問い合わせ
 			//ユーザーにメール送信
-			$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php $email contact_us > /dev/null &";
+			$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php $email contact_us > /dev/null &";
 			exec($command);
 			$this->log("$command", "info");
 
@@ -687,11 +716,11 @@ class AccountController extends AppController {
 			$text .= "\n\n";
 			$text .= "< Contact detail >\n";
 			$text .= $contactdetail;
-			$file_name = "/var/www/vhosts/nagase-personalcare.com/httpdocs/app/tmp/mail/" . $ContactId . ".txt";
+			$file_name = DOCUMENT_ROOT . "app/tmp/mail/" . $ContactId . ".txt";
 			file_put_contents($file_name, $text);
 
 			//管理者にメール送信
-			$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php " . MAIL_TO . " contact_us_notification $email $ContactId > /dev/null &";
+			$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php " . MAIL_TO . " contact_us_notification $email $ContactId > /dev/null &";
 			exec($command);
 			$this->log("$command", "info");
 		}
@@ -706,13 +735,13 @@ class AccountController extends AppController {
 		$UserInfo['tenpoUserId'] = "0";
 		$UserInfo['Email'] = $email;
 		$UserInfo['Password'] = $password;
-		$UserInfo['Salutation'] = "";
+		$UserInfo['Salutation'] = $salutation;
 		$UserInfo['FirstName'] = $name1;
 		$UserInfo['LastName'] = $name2;
 		$UserInfo['BusinessType'] = $businesstype;
 		$UserInfo['BusinessTypeOther'] = $otherbusinesstype;
 		$UserInfo['CompanyName'] = $company;
-		$UserInfo['EmployerWebsite'] = "";
+		$UserInfo['EmployerWebsite'] = $companywebsite;
 		$UserInfo['Department'] = "";
 		$UserInfo['ProfessionalTitle'] = $position;
 		$UserInfo['PhoneNumber'] = $tel;
@@ -764,13 +793,13 @@ class AccountController extends AppController {
 		$UserInfo['tenpoUserId'] = $this->tenpoUserId;
 		$UserInfo['Email'] = $email;
 		$UserInfo['Password'] = "";
-		$UserInfo['Salutation'] = "";
+		$UserInfo['Salutation'] = $salutation;
 		$UserInfo['FirstName'] = $name1;
 		$UserInfo['LastName'] = $name2;
 		$UserInfo['BusinessType'] = $businesstype;
 		$UserInfo['BusinessTypeOther'] = $otherbusinesstype;
 		$UserInfo['CompanyName'] = $company;
-		$UserInfo['EmployerWebsite'] = "";
+		$UserInfo['EmployerWebsite'] = $companywebsite;
 		$UserInfo['Department'] = "";
 		$UserInfo['ProfessionalTitle'] = $position;
 		$UserInfo['PhoneNumber'] = $tel;
@@ -807,17 +836,19 @@ class AccountController extends AppController {
 	private function write_login_info($UserInfo) {
 		$user_array = array();
 		$user_array['tenpoUserId'] = $UserInfo['tenpoUserId'];
+		$user_array['Salutation'] = $UserInfo['Salutation'];
 		$user_array['FirstName'] = $UserInfo['FirstName'];
 		$user_array['LastName'] = $UserInfo['LastName'];
 		$user_array['Email'] = $UserInfo['Email'];
 		$user_array['CompanyName'] = $UserInfo['CompanyName'];
+		$user_array['EmployerWebsite'] = $UserInfo['EmployerWebsite'];
 		$user_array['BusinessType'] = $UserInfo['BusinessType'];
 		$user_array['BusinessTypeOther'] = $UserInfo['BusinessTypeOther'];
 		$user_array['ProfessionalTitle'] = $UserInfo['ProfessionalTitle'];
 		$user_array['PhoneNumber'] = $UserInfo['PhoneNumber'];
 		$user_array['Country_Region'] = $UserInfo['Country_Region'];
 		$user_array['CountryOther'] = $UserInfo['CountryOther'];
-		$session_id = $this->Session->read('id');
+		$session_id = $this->Cookie->read('id');
 		//ユーザセッションの有効期限を最終アクセスから120分に設定する。
 		$expire = date("Y/m/d H:i:s", strtotime(EXPIRE_LOGIN));
 		$user_array['expire'] = $expire;
@@ -1046,6 +1077,25 @@ class AccountController extends AppController {
 			$html .= " selected";
 		}
 		$html .= ">Other</option>";
+		return $html;
+	}
+
+	//敬称、optionタグの作成
+	private function make_salutation_option() {
+		$option_list = array(
+			'Dr.',
+			'Mr.',
+			'Mrs.',
+			'Ms.'
+		);
+		$html = "";
+		foreach ($option_list as $value) {
+			$html .= "<option value='$value'";
+			if ($this->Salutation == $value) {
+				$html .= " selected";
+			}
+			$html .= ">$value</option>";
+		}
 		return $html;
 	}
 

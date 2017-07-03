@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="en">
 <head>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/include/head.php'); ?>
@@ -30,20 +30,17 @@
 
 <article class="content" itemscope itemtype="https://schema.org/NewsArticle">
 <section class="fade mb-0">
-<p itemprop="dateline"><time datetime="2017-02-15">February 15, 2017</time></p>
-<h3 itemprop="name">NAGASE Personal Care website is now OPEN!</h3>
+<p itemprop="dateline"><time datetime="2017-06-28">June 28, 2017</time></p>
+<h3 itemprop="name">New Data Release for “Instant Lifting Effect” with Pullulan</h3>
 </section>
 
 <section class="fade" itemprop="articleBody">
-<p itemprop="articleSection">We are pleased to announce the launch of our brand new website catering for our customers.</p>
+<img src="/img/news/news_170628.jpg">
+<p itemprop="articleSection">Our natural film forming ingredient <b>‘Pullulan’</b> has released new in-vivo data for instant lifting; results shown from our study that facial sagging can be significantly improved with the use of <b>Pullulan.</b></p>
 
-<p itemprop="articleSection">Our goal with this website is to provide users with an easy and effective way to check our new products and to make inquires. Once you have registered on the website, you can access and download our product information.</p>
+<p itemprop="articleSection"><b>Pullulan</b> is a naturally occurring, low viscosity polysaccharide with excellent lubricant, adhesive and film-forming properties, leaving a natural silicone-like after-feel. <b>Pullulan</b> also provides an instant lifting effect on the skin. <b>Pullulan</b> is <b>Ecocert COSMOS, Halal</b> certified, as well as <b>China Compliant</b>.</p>
 
-<p itemprop="articleSection">We also wanted to give our clients an opportunity to know us better. By browsing through the About Us sections, you will also see who we are and where we operate.</p>
-
-<p itemprop="articleSection">NAGASE Personal Care is a global supplier of high-quality products from Japan to international beauty and personal care companies. Our clients have always been our first priority and we plan for it to stay that way.</p>
-
-<p itemprop="articleSection">If you experience any problems using our website or if you have any questions, please contact us at &#110;&#97;&#103;&#97;&#115;&#101;&#45;&#112;&#101;&#114;&#115;&#111;&#110;&#97;&#108;&#99;&#97;&#114;&#101;&#64;&#110;&#97;&#103;&#97;&#115;&#101;&#46;&#99;&#111;&#46;&#106;&#112;.</p>
+<p itemprop="articleSection">Should you wish to obtain in-depth information on <b>instant lifting effect, anti-aging</b> or <b>skincare</b> ingredients, please register to download the information at <b>Pullulan</b> <a href="/product/0000000042">page</a>.</p>
 </section>
 
 </article>
@@ -55,3 +52,5 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/include/cookie.php'); ?>
 </body>
 </html>
+
+

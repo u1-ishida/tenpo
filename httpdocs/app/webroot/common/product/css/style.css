@@ -163,7 +163,9 @@ content:none;
 section.p_spec dl dd span#Dishwashing{
 margin-right:10px;
 }
-section.p_spec dl dd span#HairCare:before{
+section.p_spec dl dd span#HairCare:before,
+section.p_spec dl dd span#HairCare-LeaveOn:before,
+section.p_spec dl dd span#HairCare-RinseOff:before{
 content:" ";
 background:url('/common/product/img/ico_HairCare.png') center bottom no-repeat;
 background-size:contain;
@@ -173,10 +175,14 @@ width:20px;
 display:inline-block;
 vertical-align:text-bottom;
 }
-section.p_spec dl dd span#HairCare:after{
+section.p_spec dl dd span#HairCare:after,
+section.p_spec dl dd span#HairCare-LeaveOn:after,
+section.p_spec dl dd span#HairCare-RinseOff:after{
 content:none;
 }
-section.p_spec dl dd span#HairCare{
+section.p_spec dl dd span#HairCare,
+section.p_spec dl dd span#HairCare-LeaveOn,
+section.p_spec dl dd span#HairCare-RinseOff{
 margin-right:10px;
 }
 section.p_spec dl dd span#Household:before{
@@ -242,7 +248,9 @@ content:none;
 section.p_spec dl dd span#OralCare{
 margin-right:10px;
 }
-section.p_spec dl dd span#SkinCare:before{
+section.p_spec dl dd span#SkinCare:before,
+section.p_spec dl dd span#SkinCare-LeaveOn:before,
+section.p_spec dl dd span#SkinCare-RinseOff:before{
 content:" ";
 background:url('/common/product/img/ico_SkinCare.png') center bottom no-repeat;
 background-size:contain;
@@ -252,10 +260,14 @@ width:20px;
 display:inline-block;
 vertical-align:text-bottom;
 }
-section.p_spec dl dd span#SkinCare:after{
+section.p_spec dl dd span#SkinCare:after,
+section.p_spec dl dd span#SkinCare-LeaveOn:after,
+section.p_spec dl dd span#SkinCare-RinseOff:after{
 content:none;
 }
-section.p_spec dl dd span#SkinCare{
+section.p_spec dl dd span#SkinCare,
+section.p_spec dl dd span#SkinCare-LeaveOn,
+section.p_spec dl dd span#SkinCare-RinseOff{
 margin-right:10px;
 }
 section.p_spec dl dd span#SunCare:before{

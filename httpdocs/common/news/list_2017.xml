@@ -1,6 +1,7 @@
-<?xml version='1.0'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <newslist>
 <!--
+Please also update "sitemap.xml".	
 Please list from newest to newest.
 
 <date>.[datetime]
@@ -14,6 +15,19 @@ Please list from newest to newest.
 <description>
    Please enter a summary of articles.
 -->
+<item>
+<date datetime="2017-06-28">June 28, 2017</date>
+<link>/news/170628/</link>
+<title>New Data Release for “Instant Lifting Effect” with Pullulan</title>
+<description>New Technical Data Sheet of "Instant Lifting Effect" is now available for our customers.</description>
+</item>
+
+<item>
+<date datetime="2017-03-30">March 30, 2017</date>
+<link>/news/170330/</link>
+<title>NAGASE will be presenting Halal regulation at CITE Japan 2017</title>
+<description>NAGASE Personal Care will be presenting Halal regulation on beauty and personal care ingredients at the Exhibitor Technology Forum. This seminar is open to everyone who is registered to CITE Japan 2017.</description>
+</item>
 
 <item>
 <date datetime="2017-02-15">February 15, 2017</date>

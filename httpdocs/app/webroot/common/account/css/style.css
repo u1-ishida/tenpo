@@ -136,6 +136,9 @@ font-size:110%;
 border:1px solid #aaa;
 border-radius:3px;
 }
+article.account input#companywebsite{
+vertical-align:top;
+}
 article.account p.inputname input{
 width:29%;
 margin-right:2%;
@@ -154,8 +157,11 @@ border-radius:3px;
 -moz-appearance: none;
 appearance: none;
 }
+article.account select#salutation{
+width:200px;
+}
 article.account select.acchange{
-color:#555;
+color:#000;
 }
 article.account select::-ms-expand{
 display: none;
@@ -172,6 +178,7 @@ top:-3px;
 right:20px;
 font-size:80%;
 transform:scale(1,0.7);
+pointer-events:none;
 }
 article.account label.inquiry{
 height:1.5rem;
@@ -251,6 +258,9 @@ text-decoration:none;
 section.btn input.disabled:hover{
 opacity:1;
 cursor:not-allowed;
+}
+span.optblock{
+display:block;
 }
 
 /* Error */
@@ -342,7 +352,9 @@ article.account section.complete p{
 text-align:center;
 margin-bottom:1.5rem;
 }
-
+article.account section.inputconfirm p span{
+width:280px;
+}
 
 
 
@@ -449,5 +461,9 @@ top:20%;
 }
 p.agreebox label.checkbox:after{
 top:40%;
+}
+span.optblock{
+display:inline!important;
+margin-left:3px;
 }
 }

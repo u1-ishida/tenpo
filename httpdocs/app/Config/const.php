@@ -1,14 +1,19 @@
 <?php
 
-if ($_SERVER['SERVER_NAME'] == "www.nagase-personalcare.com" || $_SERVER['SERVER_NAME'] == "nagase-personalcare.com") {
+if ($_SERVER['SERVER_NAME'] == "www.nagase-personalcare.com" || $_SERVER['SERVER_NAME'] == "nagase-personalcare.com" || strpos(php_uname("n"), "tenpo_prd") !== false ) {
+
+	//ドメイン
+	define("DOMAIN", "nagase-personalcare.com");
+	//ドキュメントルート
+	define("DOCUMENT_ROOT", "/var/www/vhosts/nagase-personalcare.com/httpdocs/");
 
 	//画像、ドキュメントファイルのパス
-	define("FILESPATH", "/var/www/vhosts/nagase-personalcare.com/httpdocs/app/webroot/files");
+	define("FILESPATH", DOCUMENT_ROOT . "app/webroot/files");
 	define("PDF_FILESPATH", "/var/www/vhosts/nagase-personalcare.com/files/product_doc/");
 	define("DOCUMENT_URL", "/files/product_doc/");
 
 	//メール本文のファイルパス
-	define("MAILPATH", "/var/www/vhosts/nagase-personalcare.com/httpdocs/app/View/Emails/text/");
+	define("MAILPATH", DOCUMENT_ROOT . "app/View/Emails/text/");
 
 	//Salesforce API 接続先
 	define("API_BASE_URL", "https://ap2.force.com/services/apexrest/");
@@ -45,13 +50,18 @@ if ($_SERVER['SERVER_NAME'] == "www.nagase-personalcare.com" || $_SERVER['SERVER
 
 } else {
 
+	//ドメイン
+	define("DOMAIN", "stg.nagase-personalcare.com");
+	//ドキュメントルート
+	define("DOCUMENT_ROOT", "/var/www/vhosts/stg.nagase-personalcare.com/httpdocs/");
+
 	//画像、ドキュメントファイルのパス
-	define("FILESPATH", "/var/www/vhosts/stg.nagase-personalcare.com/httpdocs/app/webroot/files");
+	define("FILESPATH", DOCUMENT_ROOT . "app/webroot/files");
 	define("PDF_FILESPATH", "/var/www/vhosts/stg.nagase-personalcare.com/files/product_doc/");
 	define("DOCUMENT_URL", "/files/product_doc/");
 
 	//メール本文のファイルパス
-	define("MAILPATH", "/var/www/vhosts/stg.nagase-personalcare.com/httpdocs/app/View/Emails/text/");
+	define("MAILPATH", DOCUMENT_ROOT . "app/View/Emails/text/");
 
 	//Salesforce API 接続先
 	//define("API_BASE_URL", "https://yushida-developer-edition.ap2.force.com/services/apexrest/");
@@ -74,7 +84,7 @@ if ($_SERVER['SERVER_NAME'] == "www.nagase-personalcare.com" || $_SERVER['SERVER
 	define("FROM_NAME", "NAGASE Personal Care");
 	//メール送信先
 	//define("MAIL_TO", "wtg_tenpo@netyear.net");
-	define("MAIL_TO", "wtg_tenpo@netyear.net");
+	define("MAIL_TO", "wtg_tenpo@netyear.net,y-oishi@netyear.net");
 	define("SMTP_USER", "NAGASEPCWEB@nagase.co.jp");
 	define("SMTP_PASSWORD", "nagasepcweb");
 	define("MAIL_HOST", "smtp.office365.com");

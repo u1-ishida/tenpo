@@ -45,10 +45,12 @@ function complete() {
 <article class="content account">
 <form id="form_complete" action="/account/edit/complete" method="POST">
 <input type="hidden" name="mode" value="confirm">
+<input type="hidden" name="salutation" value="<?php echo $salutation; ?>">
 <input type="hidden" name="name1" value="<?php echo htmlspecialchars($name1); ?>">
 <input type="hidden" name="name2" value="<?php echo htmlspecialchars($name2); ?>">
 <input type="hidden" name="email" value="<?php echo $email; ?>">
 <input type="hidden" name="company" value="<?php echo htmlspecialchars($company); ?>">
+<input type="hidden" name="companywebsite" value="<?php echo htmlspecialchars($companywebsite); ?>">
 <input type="hidden" name="businesstype" value="<?php echo $businesstype; ?>">
 <input type="hidden" name="otherbusinesstype" value="<?php echo htmlspecialchars($otherbusinesstype); ?>">
 <input type="hidden" name="position" value="<?php echo htmlspecialchars($position); ?>">
@@ -61,9 +63,11 @@ function complete() {
 </section>
 
 <section>
+<p><span>Salutation</span><?php echo $salutation; ?></p>
 <p class="inputname"><span>Name</span><?php echo $name1; ?> <?php echo $name2; ?></p>
 <p><span>Email</span><?php echo $email; ?></p>
 <p><span>Company</span><?php echo $company; ?></p>
+<p><span>Company's Website (optional)</span><?php echo $companywebsite; ?></p>
 <p><span>Business type</span><?php echo $businesstype; ?><?php if ($businesstype == "Other") echo ": $otherbusinesstype"; ?></p>
 <p><span>Position (optional)</span><?php echo $position; ?></p>
 <p><span>Telephone</span><?php echo $tel; ?></p>

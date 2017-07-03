@@ -41,7 +41,7 @@
 Guangzhou Nagase Trading Ltd.: <span class="b">3L03</span></p>
 
 <p itemprop="articleSection">NAGASE Personal Care will showcase beauty and personal care ingredients from Japan.<br>
-For further information and making appointments at the show, please email to nagase-personalcare@nagase.co.jp.
+For further information and making appointments at the show, please email to &#110;&#97;&#103;&#97;&#115;&#101;&#45;&#112;&#101;&#114;&#115;&#111;&#110;&#97;&#108;&#99;&#97;&#114;&#101;&#64;&#110;&#97;&#103;&#97;&#115;&#101;&#46;&#99;&#111;&#46;&#106;&#112;.
 </p>
 
 <p itemprop="articleSection">Sign up for your free admission badge now to meet Nagase Personal Care team in Guangzhou at <a href="http://www.pchi-china.com/en/" target="_blank" rel="nofollow">http://www.pchi-china.com/en/</a></p>

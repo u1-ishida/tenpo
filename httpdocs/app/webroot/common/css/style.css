@@ -43,6 +43,14 @@ color: #434343;
 line-height: 1.5rem;
 }
 
+p.intro {
+	text-align: left;
+    font-weight: normal;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 980px;
+}
+
 h1{
 margin:0;
 padding:0;
@@ -139,6 +147,10 @@ input:-ms-input-placeholder,
 input::-moz-placeholder{
 color:#bbb;
 font-weight:normal;
+}
+input[type="button"],
+input[type="submit"]{
+-webkit-appearance:none;
 }
 
 /* CheckBox */
@@ -364,29 +376,40 @@ top:0;
 header.scroll{
 box-shadow: 0 9px 12px -9px #222;
 }
-header div{
+header .wrap{
 text-align:left;
 width:980px;
 margin:20px auto 0 auto;
 position:relative;
 }
 header h1{
-position:absolute;
+float: left;
 width:360px;
-top:15px;
+margin-top:15px;
+}
+header .utility {
+float:right;
+width:450px;
+}
+header .utility.loggedin{
+width:auto;
+min-width:450px;
 }
 header h1 img{
 width: 100%;
 }
-header section{
-display:inline-block;
-font-size:95%;
-font-weight:bold;
-position:absolute;
-right:0;
+header .loginBtn{
+float:right;
 }
-header section input#id,
-header section input#password{
+header .utility .accountName{
+float:left;
+font-size: 95%;
+font-weight:bold;
+margin-right:10px;
+width: auto;
+}
+header .loginBtn input#id,
+header .loginBtn input#password{
 width:80px;
 border-radius:3px;
 border:1px solid #ccc;
@@ -394,11 +417,11 @@ margin:0 10px 0 5px;
 font-weight:normal;
 transition:all 0.4s ease;
 }
-header section input#id:focus{
+header .loginBtn input#id:focus{
 width:350px;
 }
-header section a.btn,
-header section input.btn{
+header .loginBtn a.btn,
+header .loginBtn input.btn{
 display:inline-block;
 text-align:center;
 width:115px;
@@ -407,15 +430,19 @@ padding:5px 0;
 border-radius:3px;
 background-color:#c01443;
 color:#fff;
+font-size:80%;
 font-weight:normal;
 transition:all 0.3s ease;
 box-sizing:border-box;
 cursor:pointer;
 }
-header section input.btn:hover{
+header .loginBtn input.btn:hover{
 text-decoration:none;
 color:#fff;
 opacity:0.7;
+}
+header .logoutBtn{
+margin-top:3px;
 }
 header span.headbtn{
 position:relative;
@@ -428,23 +455,17 @@ position:absolute;
 top:2px;
 right:10px;
 }
-header ul{
-display:inline-block;
-position:absolute;
-top:45px;
-right:0;
+header nav{
+float:left;
+}
+header .utility.loggedin nav{
+margin-right:15px;
 }
 header ul li{
 display:inline-block;
 padding:0 15px;
-border-left:1px solid #c01443;
+border-right:1px solid #c01443;
 font-size:110%;
-}
-header ul li:first-child{
-border:none;
-}
-header ul li:last-child{
-padding-right:0;
 }
 header span.menutoggle{
 display:none;
@@ -459,10 +480,6 @@ header a.loginname{
 text-decoration:underline;
 display:inline-block;
 vertical-align:middle;
-}
-header section.loggedin span{
-padding-left:7px;
-padding-right:7px;
 }
 /*header a.loginname:after{
 display:inline-block;
@@ -495,6 +512,52 @@ background-color:#aaa;
 color:#fff;
 padding:3px 5px;
 font-weight:normal;
+}
+
+header .seachBox{
+padding-top:15px;
+clear:both;
+}
+
+header .seachBox #___gcse_0{
+float:right;
+width:450px;
+}
+
+header .seachBox .gsc-input-box{
+border-color:#ccc;
+border-top-right-radius:0;
+border-bottom-right-radius:0;
+border-top-left-radius:4px;
+border-bottom-left-radius:4px;
+border-right: none;
+}
+
+input.gsc-input {background-image:none !important;}
+
+header .seachBox .gsc-search-box-tools .gsc-search-box .gsc-input{
+padding-right:0;
+}
+header .seachBox input.gsc-search-button,
+header .seachBox input.gsc-search-button:hover,
+header .seachBox input.gsc-search-button:focus{
+border-color:#ccc;
+border-top-right-radius:4px;
+border-bottom-right-radius:4px;
+border-top-left-radius:0;
+border-bottom-left-radius:0;
+border-left: none;
+margin-left:0;
+}
+header .seachBox .cse .gsc-search-button input.gsc-search-button-v2,
+header .seachBox input.gsc-search-button-v2{
+border-left: none;
+margin-top: 3px;
+padding:6px 50px;
+}
+table.gstl_50.gssb_c {
+position:fixed !important;
+z-index:999999999999;
 }
 
 /*Footer*/
@@ -634,6 +697,15 @@ font-size:110%;
 border:1px solid #aaa;
 border-radius:3px;
 }
+div.search input.inputword::-webkit-input-placeholder{
+color: #bbb;
+}
+div.search input.inputword:-ms-input-placeholder{
+color: #bbb;
+}
+div.search input.inputword::-moz-placeholder{
+color: #bbb;
+}
 div.search select{
 width:455px;
 padding:10px;
@@ -659,6 +731,7 @@ top:0;
 right:20px;
 font-size:80%;
 transform:scale(1,0.7);
+pointer-events:none;
 }
 div.search label:first-child{
 margin-right:21px;
@@ -676,7 +749,7 @@ width:250px;
 margin:20px auto 0 auto;
 padding:13px;
 color:#c01443;
-background:url(/common/product/img/search.png) no-repeat 20px 11px #eee;
+background:url(/product/img/search.png) no-repeat 20px 11px #eee;
 border:1px solid #eee;
 border-radius:3px;
 transition:all 0.3s ease;

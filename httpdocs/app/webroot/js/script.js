@@ -18,7 +18,13 @@ $(document).ready(function(){
         centerMode: true,
         centerPadding: '0px'
       }
+    },{
+      breakpoint: 1150,
+      settings: {
+        arrows: false,
+      }
     }
+
   ]
   });
 });

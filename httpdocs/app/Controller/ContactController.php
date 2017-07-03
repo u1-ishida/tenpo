@@ -267,7 +267,7 @@ class ContactController extends AppController {
 
 		//ユーザーにメール送信
 		$email = $this->Email;
-		$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php $email contact_us > /dev/null &";
+		$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php $email contact_us > /dev/null &";
 		exec($command);
 		$this->log("$command", "info");
 
@@ -295,11 +295,11 @@ class ContactController extends AppController {
 		$text .= "\n\n";
 		$text .= "< Contact detail >\n";
 		$text .= $contactdetail;
-		$file_name = "/var/www/vhosts/nagase-personalcare.com/httpdocs/app/tmp/mail/" . $ContactId . ".txt";
+		$file_name = DOCUMENT_ROOT . "app/tmp/mail/" . $ContactId . ".txt";
 		file_put_contents($file_name, $text);
 
 		//管理者にメール送信
-		$command = "/usr/bin/php /var/www/vhosts/nagase-personalcare.com/httpdocs/app/Console/Command/send_mail.php " . MAIL_TO . " contact_us_notification $email $ContactId > /dev/null &";
+		$command = "/usr/bin/php " . DOCUMENT_ROOT . "app/Console/Command/send_mail.php " . MAIL_TO . " contact_us_notification $email $ContactId > /dev/null &";
 		exec($command);
 		$this->log("$command", "info");
 
